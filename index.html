@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhavya Singhal | Portfolio</title>
+
+   
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Bhavya Singhal</h1>
+        <div class="nav-menu">
+            <button class="nav-btn active" onclick="showSection('about')">About Me</button>
+            <button class="nav-btn" onclick="showSection('skills')">Skills</button>
+            <button class="nav-btn" onclick="showSection('projects')">Projects</button>
+            <button class="nav-btn" onclick="showSection('contact')">Contact Me</button>
+        </div>
+    </header>
+
+    <div class="profile-photo">
+        <img src="image.png" alt="Bhavya Singhal Photo">
+    </div>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>
+            Hi! I'm Bhavya Singhal, a passionate web developer and programmer.
+            I am currently studying at KR Mangalam University.
+        </p>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <table>
+            <tr>
+                <th>Skill Category</th>
+                <th>Technologies / Tools</th>
+            </tr>
+            <tr>
+                <td>Frontend Development</td>
+                <td>HTML, CSS, JavaScript</td>
+            </tr>
+            <tr>
+                <td>Programming Languages</td>
+                <td>Python, C++</td>
+            </tr>
+            <tr>
+                <td>Design & Layout</td>
+                <td>Responsive Web Design, UI/UX</td>
+            </tr>
+            <tr>
+                <td>Version Control</td>
+                <td>Git, GitHub</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li>Daily Calorie Tracker (Python)</li>
+            <li>My Portfolio (Basic HTML)</li>
+            
+        </ul>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <table>
+            <tr>
+                <th>Type</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><a href="mailto:bbhavisinghal@gmail.com">bbhavisinghal@gmail.com</a></td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td>+91 99999 99999</td>
+            </tr>
+            <tr>
+                <td>LinkedIn</td>
+                <td><a href="https://www.linkedin.com/in/bhavya-singhal-a0b485381/"
+                        target="_blank">linkedin.com/in/bhavya-singhal-a0b485381/</a></td>
+            </tr>
+            <tr>
+                <td>GitHub</td>
+                <td><a href="https://github.com/BhavyaSinghal-14" target="_blank">github.com/BhavyaSinghal-14</a></td>
+            </tr>
+            
+        </table>
+    </section>
+
+    <section class="contact-form">
+        <h2>Get in Touch</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" placeholder="Enter your age" required>
+
+            <label for="number">Phone Number:</label>
+            <input type="tel" id="number" name="number" placeholder="Enter your phone number" required>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 Bhavya Singhal. All rights reserved.</p>
+    </footer>
+
+    
+    <div class="scroll-buttons">
+        <button class="scroll-btn" onclick="scrollToTop()">↑</button>
+        <button class="scroll-btn" onclick="scrollToBottom()">↓</button>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(button => button.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        function scrollToBottom() {
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        }
+    </script>
+</body>
+
+</html>
